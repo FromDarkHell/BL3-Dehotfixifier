@@ -14,18 +14,18 @@ namespace BL3_Dehotfixifier
             InitializeComponent();
             LauncherTextBox.Text = Properties.Settings.Default.epicLauncherPath;
         }
-        string cmdEnable = "Netsh advfirewall firewall add rule name=\"EGS - BL3 - DENY ACCESS\" program=\"{NAME}\" protocol=tcp dir =out enable=yes action = block profile=private,domain,public";
+        string cmdEnable = "Netsh advfirewall firewall add rule name=\"EGS - BL3 - DENY ACCESS\" program=\"{NAME}\" protocol=tcp dir=out enable=yes action = block profile=private,domain,public";
 
         string cmdDisable = "netsh advfirewall firewall set rule name=\"EGS - BL3 - DENY ACCESS\" new enable=no";
         private void Enable_Click(object sender, RoutedEventArgs e)
         {
-            string newCmd = cmdEnable.Replace("{NAME}", LauncherTextBox.Text);
+            string newCmd = cmdDisable.Replace("{NAME}", LauncherTextBox.Text);
             startCMD(newCmd);
         }
         private void Disable_Click(object sender, RoutedEventArgs e)
         {
-            string newCmd = cmdDisable.Replace("{NAME}", LauncherTextBox.Text);
-            startCMD(cmdDisable);
+            string newCmd = cmdEnable.Replace("{NAME}", LauncherTextBox.Text);
+            startCMD(newCmd);
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
