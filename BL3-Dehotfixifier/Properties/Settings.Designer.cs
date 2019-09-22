@@ -22,17 +22,5 @@ namespace BL3_Dehotfixifier.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string epicLauncherPath {
-            get {
-                return ((string)(this["epicLauncherPath"]));
-            }
-            set {
-                this["epicLauncherPath"] = value;
-            }
-        }
     }
 }

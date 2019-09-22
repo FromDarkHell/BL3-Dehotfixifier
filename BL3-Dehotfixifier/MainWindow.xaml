@@ -13,8 +13,5 @@
         </Grid.ColumnDefinitions>
         <Button Content="Enable Connection/Hotfixes" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Width="170" Grid.ColumnSpan="2" Click="Enable_Click"/>
         <Button Content="Disable Connection/Hotfixes" HorizontalAlignment="Left" Margin="25,53,0,0" VerticalAlignment="Top" Width="170" Grid.ColumnSpan="2" Click="Disable_Click"/>
-        <Label Content="Epic Launcher (Exe) Path" HorizontalAlignment="Left" Margin="45,75,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <TextBox Name="LauncherTextBox" HorizontalAlignment="Left" Height="23" Margin="10,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" Grid.ColumnSpan="2" TextChanged="TextBox_TextChanged"/>
-
     </Grid>
 </Window>
