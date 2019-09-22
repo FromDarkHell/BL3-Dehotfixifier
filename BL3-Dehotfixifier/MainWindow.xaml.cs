@@ -16,7 +16,7 @@ namespace BL3_Dehotfixifier
         }
         string cmdEnable = "Netsh advfirewall firewall add rule name=\"EGS - BL3 - DENY ACCESS\" program=\"{NAME}\" protocol=tcp dir=out enable=yes action = block profile=private,domain,public";
 
-        string cmdDisable = "netsh advfirewall firewall set rule name=\"EGS - BL3 - DENY ACCESS\" new enable=no";
+        string cmdDisable = "netsh advfirewall firewall delete rule name=\"EGS - BL3 - DENY ACCESS\"";
         private void Enable_Click(object sender, RoutedEventArgs e)
         {
             string newCmd = cmdDisable.Replace("{NAME}", LauncherTextBox.Text);
