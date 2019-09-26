@@ -33,20 +33,13 @@ namespace BL3_Dehotfixifier
             {
                 MessageBox.Show("An error occurred! Try running in administrator mode. If this doesn't work, contact FromDarkHell!");
             }
-
         }
         private void Enable_Click(object sender, RoutedEventArgs e)
         {
-            //try
-            //{
             var linesToKeep = File.ReadAllLines(hostsPath).Where(l => l != hostsEnabled);
             File.WriteAllLines(hostsPath, linesToKeep);
             flushDNSCache();
-            //}
-            //catch (Exception)
-            //{
-            //    MessageBox.Show("An error occurred! Try running in administrator mode. If this doesn't work, contact FromDarkHell!");
-            //}
+
         }
 
         private void flushDNSCache()
@@ -61,6 +54,7 @@ namespace BL3_Dehotfixifier
 
             process.WaitForExit(1000);
             process.Close();
+            MessageBox.Show("Complete!");
         }
     }
 }
